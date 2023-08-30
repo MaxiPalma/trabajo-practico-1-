@@ -1,9 +1,11 @@
 #include <iostream>
 
 using namespace std;
-int invertir (int numero = 0){
+int invertir (int numero = 0)
+{
     int y = 0;
-    while(numero != 0){
+    while(numero != 0)
+    {
         y = y*10 + numero % 10;
         numero = numero / 10;
     }
