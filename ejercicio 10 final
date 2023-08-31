@@ -23,9 +23,7 @@ int sumarDigitos (int digitos) //funcion sumar digitos
 
 int multiplos (int a, int b)  // funcion multiplos
 {
-    int c = 0;
-    int d = 0;
-    if (a > b)              // dividir solo si el dividendo es mayor al divisor
+    if (a == 0 || a >= b)              // tomar como valido el cero o dividir solo si el dividendo es mayor o igual al divisor
     {
         if (a % b == 0)
         {
@@ -38,26 +36,19 @@ int multiplos (int a, int b)  // funcion multiplos
     }
     else                // invertir el orden de los factores para que el dividendo sea mayor al divisor
     {
-        c = a;
-        d = b;
-        if (d % c == 0)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return false;
     }
 }
+
+
+
 int main()
 {
     char opcion;
-    int a = 0;
+    int z = 0;
     int numeroDigitos;
     int multiplo1 = 0;
     int multiplo2 = 0;
-
 
     cout << "Elija la opcion que desee: " << endl;   //MENÚ
     cout << "'A': Invertir numero" << endl;
@@ -72,8 +63,8 @@ int main()
      case 'A':
         cout << "Usted eligio la opcion 'A'" << endl;
         cout<< "ingrese un numero: ";
-        cin >> a;
-        cout<<"el numero invertido es "<< invertir (a) << endl; //invoco a la función INVERTIR
+        cin >> z;
+        cout<<"el numero invertido es "<< invertir (z) << endl; //invoco a la función INVERTIR
         break;
      case 'B':
         cout << "Usted eligio la opcion 'B'" << endl;
@@ -89,11 +80,11 @@ int main()
         cin >> multiplo2;
         if (multiplos (multiplo1,multiplo2) == true) //invoco la funcion multiplos
             {
-                cout << "los numeros ingresados son multiplos" << endl;
+            cout << multiplo1 << " es multiplo de " << multiplo2 << endl;
             }
             else
             {
-                cout << "los numeros ingresados no son multiplos" << endl;
+                cout << multiplo1 << " no es multiplo de " << multiplo2 << endl;
             }
         break;
      case 'D':
@@ -101,5 +92,6 @@ int main()
         break;
     default: cout << "opcion incorrecta"<< endl;
     }
+
 return 0;
 }
