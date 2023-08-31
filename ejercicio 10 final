@@ -34,7 +34,7 @@ int multiplos (int a, int b)  // funcion multiplos
             return false;
         }
     }
-    else                // invertir el orden de los factores para que el dividendo sea mayor al divisor
+    else
     {
         return false;
     }
