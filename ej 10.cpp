@@ -93,6 +93,6 @@ int main()
             default: cout << "OPCION INCORRECTA"<< endl;
             }
     }
-    while (opcion != D);
+    while (opcion != 'D');
     return 0;
 }
