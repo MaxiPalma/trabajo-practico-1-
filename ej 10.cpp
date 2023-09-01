@@ -42,54 +42,57 @@ int multiplos (int a, int b)  // funcion multiplos
 
 int main()
 {
-    char opcion;
+    char opcion,D;
     int z = 0;
     int numeroDigitos;
     int multiplo1 = 0;
     int multiplo2 = 0;
 
-    cout << "Elija la opcion que desee: " << endl;   //MENÚ
-    cout << "'A': Invertir numero" << endl;
-    cout << "'B': Sumatoria de digitos." << endl;
-    cout << "'C': Decir si son multiplos." << endl;
-    cout << "'D': Salir " << endl;
-    cin >> opcion;
-    opcion = toupper(opcion);
-
-    switch(opcion)
+    do
     {
-     case 'A':
-        cout << "Usted eligio la opcion 'A'" << endl;
-        cout<< "ingrese un numero: ";
-        cin >> z;
-        cout<<"el numero invertido es "<< invertir (z) << endl; //invoco a la función INVERTIR
-        break;
-     case 'B':
-        cout << "Usted eligio la opcion 'B'" << endl;
-        cout<< "ingrese un numero para saber la cantidad de digitos que posee." << endl;
-        cin >> numeroDigitos;
-        cout << "la sumatoria de digitos es de: "<< sumarDigitos(numeroDigitos) << endl; //invoco la funcion sumarDigitos
-        break;
-     case 'C':
-        cout << "Usted eligio la opcion 'C'" << endl;
-        cout << "Ingrese un numero: "<<endl;
-        cin >> multiplo1;
-        cout << "ingrese otro numero:" << endl;
-        cin >> multiplo2;
-        if (multiplos (multiplo1,multiplo2) == true) //invoco la funcion multiplos
-            {
-            cout << multiplo1 << " es multiplo de " << multiplo2 << endl;
-            }
-            else
-            {
-                cout << multiplo1 << " no es multiplo de " << multiplo2 << endl;
-            }
-        break;
-     case 'D':
-        cout << "Usted eligio la opcion 'D'. Pulse ENTER para salir del programa."<< endl;
-        break;
-    default: cout << "opcion incorrecta"<< endl;
-    }
+        cout << "Elija la opcion que desee: " << endl;   //MENÚ
+        cout << "'A': Invertir numero" << endl;
+        cout << "'B': Sumatoria de digitos." << endl;
+        cout << "'C': Decir si son multiplos." << endl;
+        cout << "'D': Salir " << endl;
+        cin >> opcion;
+        opcion = toupper(opcion);
 
-return 0;
+            switch(opcion)
+            {
+            case 'A':
+                cout << "Usted eligio la opcion 'A'" << endl;
+                cout<< "ingrese un numero: ";
+                cin >> z;
+                cout<<"el numero invertido es "<< invertir (z) << endl; //invoco a la función INVERTIR
+                break;
+            case 'B':
+                cout << "Usted eligio la opcion 'B'" << endl;
+                cout<< "ingrese un numero para saber la cantidad de digitos que posee." << endl;
+                cin >> numeroDigitos;
+                cout << "la sumatoria de digitos es de: "<< sumarDigitos(numeroDigitos) << endl; //invoco la funcion sumarDigitos
+                break;
+            case 'C':
+                cout << "Usted eligio la opcion 'C'" << endl;
+                cout << "Ingrese un numero: "<<endl;
+                cin >> multiplo1;
+                cout << "ingrese otro numero:" << endl;
+                cin >> multiplo2;
+                if (multiplos (multiplo1,multiplo2) == true) //invoco la funcion multiplos
+                {
+                    cout << multiplo1 << " es multiplo de " << multiplo2 << endl;
+                }
+                else
+                {
+                    cout << multiplo1 << " no es multiplo de " << multiplo2 << endl;
+                }
+                break;
+            case 'D':
+                    cout << "Usted eligio la opcion 'D'. Pulse ENTER para salir del programa."<< endl;
+                break;
+            default: cout << "OPCION INCORRECTA"<< endl;
+            }
+    }
+    while (opcion != D);
+    return 0;
 }
